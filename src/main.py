@@ -1,13 +1,10 @@
 # Criacao de lista com 1 elemento senao ela nao existe
-lista = ["edson"]
+lista = []
 
 # Funcao Adicionar
 def Adicionar():
-    if lista:
         nome = input("Nome: ")
         lista.append(nome)
-    else:
-        print("Lista nao existe!")
 
 # Funcao Listar
 def  Listar():
@@ -25,11 +22,3 @@ while True:
     if sair == "":break
     
 Listar()
-
-if __name__ == "__main__":
-    while True:
-        Adicionar()
-        sair = input("")
-        if sair == "":break
-    
-    Listar()
