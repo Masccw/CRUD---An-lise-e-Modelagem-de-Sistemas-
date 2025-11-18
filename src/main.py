@@ -1,9 +1,9 @@
 # Criacao de lista com 1 elemento senao ela nao existe
 lista = []
 
+
 # Funcao Adicionar
-def Adicionar():
-        nome = input("Nome: ")
+def Adicionar(nome):
         lista.append(nome)
 
 # Funcao Listar
@@ -17,8 +17,8 @@ def  Listar():
 
 #Rodar o programa
 while True:
-    Adicionar()
-    sair = input("")
-    if sair == "":break
+    nome = input("Digite o nome: ")
+    if nome == "":break
+    Adicionar(nome)
     
 Listar()
