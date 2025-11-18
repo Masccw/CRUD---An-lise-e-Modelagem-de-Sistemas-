@@ -1,12 +1,16 @@
+# Biblioteca para marca o dia e hora
+from datetime import datetime as dt
+
 class Paciente():
-    def __init__(self, nome, cpf, datNasc, endereco):
+    def __init__(self, nome, cpf, datNasc, endereco, dia):
         self.nome = nome
         self.cpf = cpf
         self.datNasc = datNasc
         self.endereco = endereco
+        self.dia = dia
 
     def __str__(self):
-        return f"\nNome: {self.nome}\nCPF: {self.cpf}\nData de nascimento: {self.datNasc}\nEndereco: {self.endereco}\n"
+        return f"\nNome: {self.nome}\nCPF: {self.cpf}\nData de nascimento: {self.datNasc}\nEndereco: {self.endereco}\nInternado: {self.dia}\n"
 
 # Lista de Pacientes
 Lista = []
@@ -20,7 +24,11 @@ def Adicionar():
     dataNasc = input("Digite o dataNasc: ")
     endereco = input("Digite o Endereco: ")
 
-    p1 = Paciente(nomeUsuario, cpf, dataNasc, endereco)
+    #Dia da atual da internacao
+    dia = dt.now().date()
+
+    #Objeto
+    p1 = Paciente(nomeUsuario, cpf, dataNasc, endereco, dia)
     Lista.append(p1)
 
 
@@ -40,5 +48,3 @@ while True:
     elif o == "2":
         Listar()
     elif o == "3":break
-
-
