@@ -6,7 +6,8 @@ def pedir_cpf():
         cpf = CPF()
         numero_cpf = input("Digite o CPF: ")
         if cpf.validate(numero_cpf):
-            print(f"O CPF {numero_cpf} é válido.")        
+            print(f"O CPF {numero_cpf} é válido.")     
+            break   
         else:
             print(f"O CPF {numero_cpf} é inválido.")
         return numero_cpf
