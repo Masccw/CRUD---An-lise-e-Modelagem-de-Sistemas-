@@ -2,16 +2,15 @@ from datetime import datetime as dt
 from validate_docbr import CPF
 
 def pedir_cpf():
+    cpf = CPF()
     while True:
-        cpf = CPF()
         numero_cpf = input("Digite o CPF: ")
+        
         if cpf.validate(numero_cpf):
-            print(f"O CPF {numero_cpf} é válido.")     
-            break   
+            print(f"O CPF {numero_cpf} é válido.")  
+            return numero_cpf      
         else:
-            print(f"O CPF {numero_cpf} é inválido.")
-        return numero_cpf
-
+            print(f"O CPF {numero_cpf} é inválido. Tente novamente")
 
 def pedir_data_nascimento():
     while True:
